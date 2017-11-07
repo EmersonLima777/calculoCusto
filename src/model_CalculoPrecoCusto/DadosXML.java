@@ -108,8 +108,10 @@ public class DadosXML {
 
 													Element elementoICMS = (Element) nNodeICMS;
 
-													//Verifica se é o ICMS10 para retirar o valor de ST
-													if (nNodeICMS.getNodeName().equals("ICMS10")){
+													//Verifica se o CST é ICMS10 ou ICMS70 ou ICMS30 para retirar o valor de ST
+													if (nNodeICMS.getNodeName().equals("ICMS10") || 
+															nNodeICMS.getNodeName().equals("ICMS70") ||
+															nNodeICMS.getNodeName().equals("ICMS30")){
 
 														//Busca o valor do Icms ST e coloca na variável ICMSST da nota fiscal
 														nota.setICMSST(Float.parseFloat(elementoICMS.getElementsByTagName("vICMSST").item(numICMS).getTextContent()));
