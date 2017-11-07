@@ -29,7 +29,7 @@ public class DadosXML {
 	public static void importarNfe() throws Exception {
 
 		
-			//Montagem do documento XML para importação
+			//Montagem do documento XML para importação 
 
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = factory.newDocumentBuilder();

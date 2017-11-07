@@ -2,10 +2,8 @@ package Interface;
 /**
  * Author Emerson Rodrigues
  * Programa para importação e cálculo de preço de custo final dos produtos
- * O Custo Final é baseado no valor unitario do produto mais impostos e frete
- * */
+ * O Custo Final é baseado no valor unitario do produto mais impostos e frete*/
 
-import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -14,19 +12,15 @@ import java.awt.event.ActionListener;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
-import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-
-import org.eclipse.wb.swing.FocusTraversalOnArray;
 
 import model_CalculoPrecoCusto.DadosXML;
 
@@ -152,9 +146,6 @@ public class TelaInicialInterface  extends JFrame {
 						"CUSTO FINAL"});
 
 		JScrollPane scrollPane = new JScrollPane();
-		
-		JFormattedTextField campoFrete = new JFormattedTextField();
-		campoFrete.setFont(new Font("Dialog", Font.PLAIN, 12));
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -166,9 +157,7 @@ public class TelaInicialInterface  extends JFrame {
 							.addComponent(lblEmpresa)
 							.addGap(12)
 							.addComponent(lblNomeEmpresa, GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-							.addGap(87)
-							.addComponent(campoFrete, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addGap(35))
+							.addGap(126))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGap(0)
 							.addComponent(panelButton, GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)))
@@ -184,10 +173,8 @@ public class TelaInicialInterface  extends JFrame {
 					.addGap(32)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addComponent(lblEmpresa)
-						.addComponent(lblNomeEmpresa, GroupLayout.PREFERRED_SIZE, 15, GroupLayout.PREFERRED_SIZE)
-						.addComponent(campoFrete
-								, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED)
+						.addComponent(lblNomeEmpresa, GroupLayout.PREFERRED_SIZE, 15, GroupLayout.PREFERRED_SIZE))
+					.addGap(10)
 					.addComponent(panelButton, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
@@ -212,7 +199,7 @@ public class TelaInicialInterface  extends JFrame {
 		);
 		panelButton.setLayout(gl_panelButton);
 		getContentPane().setLayout(groupLayout);
-		getContentPane().setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblEmpresa, lblNomeEmpresa, panelButton, btnNewButton, scrollPane, tableNota}));
+		
 	}
 }
 

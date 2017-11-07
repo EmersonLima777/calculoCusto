@@ -18,7 +18,7 @@ public class NotaFiscal {
 	private float custoFinal;
 	private String Descricao;
 
-	//Objeto que formata os valores para duas casas decimais
+	//Objeto que formata os valores para duas casas decimais 
 	DecimalFormat df = new DecimalFormat("0.00");
 
 

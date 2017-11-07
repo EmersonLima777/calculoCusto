@@ -5,7 +5,7 @@ public class CustoFinal {
 	static float vlripi;
 	static float custofinal;
 
-	//Método de calculo de icmsst
+	//Método de calculo de icmsst 
 	public static float calcularICMSST(float icmsst, float quantidade){
 		vlricmsst = icmsst/quantidade;
 		return vlricmsst;

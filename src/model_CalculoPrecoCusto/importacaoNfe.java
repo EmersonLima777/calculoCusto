@@ -9,7 +9,8 @@ public class importacaoNfe {
 	static JFileChooser importacao = new JFileChooser();
 	static StringBuilder sb = new StringBuilder();
 	static String nota = new String();
-
+	
+	//Metodo para abrir diretorio no sistema operacional
 	public static String importar() throws Exception{
 
 		if(importacao.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
